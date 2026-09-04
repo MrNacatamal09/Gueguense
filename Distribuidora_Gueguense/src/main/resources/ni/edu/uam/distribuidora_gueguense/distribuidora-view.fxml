@@ -22,6 +22,11 @@
                         <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar"/>
                     </items>
                 </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca de"/>
+                    </items>
+                </Menu>
             </menus>
         </MenuBar>
 

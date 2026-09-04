@@ -15,6 +15,13 @@
                         <MenuItem accelerator="Ctrl+Q" mnemonicParsing="false" onAction="#salir" text="Salir"/>
                     </items>
                 </Menu>
+                <Menu mnemonicParsing="false" text="Producto">
+                    <items>
+                        <MenuItem accelerator="Ctrl+G" mnemonicParsing="false" onAction="#guardar" text="Guardar"/>
+                        <MenuItem mnemonicParsing="false" onAction="#editar" text="Editar"/>
+                        <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar"/>
+                    </items>
+                </Menu>
             </menus>
         </MenuBar>
 

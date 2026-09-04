@@ -10,21 +10,9 @@
             <menus>
                 <Menu mnemonicParsing="false" text="Archivo">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
-                        <MenuItem mnemonicParsing="false" onAction="#limpiar" text="Limpiar" />
-                        <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Producto">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#guardar" text="Guardar" />
-                        <MenuItem mnemonicParsing="false" onAction="#editar" text="Editar" />
-                        <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Ayuda">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca de" />
+                        <MenuItem accelerator="Ctrl+N" mnemonicParsing="false" onAction="#nuevo" text="Nuevo"/>
+                        <MenuItem mnemonicParsing="false" onAction="#limpiar" text="Limpiar"/>
+                        <MenuItem accelerator="Ctrl+Q" mnemonicParsing="false" onAction="#salir" text="Salir"/>
                     </items>
                 </Menu>
             </menus>
@@ -32,58 +20,56 @@
 
         <ToolBar>
             <items>
-                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
-                <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
-                <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" text="Editar" />
-                <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" text="Nuevo"/>
+                <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" text="Guardar"/>
+                <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" text="Editar"/>
+                <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar"/>
             </items>
         </ToolBar>
 
         <GridPane hgap="10.0" vgap="10.0">
             <children>
-                <Label text="Código:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <TextField fx:id="txtCodigo" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <Label text="Nombre:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                <TextField fx:id="txtNombre" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-
-                <Label text="Categoría:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <ComboBox fx:id="cbCategoria" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label text="Precio:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <TextField fx:id="txtPrecio" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-
-                <Label text="Existencia:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <TextField fx:id="txtExistencia" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Código:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtCodigo" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label text="Nombre:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtNombre" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                <Label text="Categoría:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <ComboBox fx:id="cbCategoria" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Precio:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtPrecio" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                <Label text="Existencia:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtExistencia" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
             </children>
             <VBox.margin>
-                <Insets left="20.0" right="20.0" top="10.0" />
+                <Insets left="20.0" right="20.0" top="10.0"/>
             </VBox.margin>
         </GridPane>
 
         <TableView fx:id="tbProductos" prefHeight="300.0">
             <columns>
-                <TableColumn fx:id="colCodigo" prefWidth="120.0" text="Código" />
-                <TableColumn fx:id="colNombre" prefWidth="180.0" text="Nombre" />
-                <TableColumn fx:id="colCategoria" prefWidth="160.0" text="Categoría" />
-                <TableColumn fx:id="colPrecio" prefWidth="120.0" text="Precio" />
-                <TableColumn fx:id="colExistencia" prefWidth="120.0" text="Existencia" />
+                <TableColumn fx:id="colCodigo" prefWidth="120.0" text="Código"/>
+                <TableColumn fx:id="colNombre" prefWidth="180.0" text="Nombre"/>
+                <TableColumn fx:id="colCategoria" prefWidth="160.0" text="Categoría"/>
+                <TableColumn fx:id="colPrecio" prefWidth="120.0" text="Precio"/>
+                <TableColumn fx:id="colExistencia" prefWidth="120.0" text="Existencia"/>
             </columns>
             <contextMenu>
                 <ContextMenu>
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#editar" text="Editar producto" />
-                        <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar producto" />
-                        <MenuItem mnemonicParsing="false" onAction="#verDetalle" text="Ver detalle" />
+                        <MenuItem mnemonicParsing="false" onAction="#editar" text="Editar producto"/>
+                        <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar producto"/>
+                        <MenuItem mnemonicParsing="false" onAction="#verDetalle" text="Ver detalle"/>
                     </items>
                 </ContextMenu>
             </contextMenu>
             <VBox.margin>
-                <Insets left="20.0" right="20.0" />
+                <Insets left="20.0" right="20.0"/>
             </VBox.margin>
         </TableView>
 
         <Label fx:id="lblResultado" text="Listo">
             <VBox.margin>
-                <Insets left="20.0" />
+                <Insets left="20.0"/>
             </VBox.margin>
         </Label>
     </children>
